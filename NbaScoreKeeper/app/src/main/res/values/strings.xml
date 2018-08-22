@@ -1,0 +1,27 @@
+<resources>
+   <!--string resources-->
+    <string name="app_name">Nba Score Keeper</string>
+    <string-array name="nba_playoff_teams">
+        <item>HOU</item>
+        <item>UTA</item>
+        <item>NOP</item>
+        <item>GSW</item>
+        <item>TOR</item>
+        <item>CLE</item>
+        <item>PHI</item>
+        <item>BOS</item>
+    </string-array>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="bottom_button">reset</string>
+    <string name="banner_description">Banner of the NBA logo with a blue background.</string>
+    <string name="minusOneDescription">minus one icon</string>
+    <string name="minusTwoDescription">minus two icon</string>
+    <string name="minusThreeDescription">minus three icon</string>
+    <string name="plusOneDescription">plus three icon</string>
+    <string name="plusTwoDescription">plus three icon</string>
+    <string name="plusThreeDescription">plus three icon</string>
+
+</resources>

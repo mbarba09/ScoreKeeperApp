@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/small"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/weighted_zero"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@mipmap/nbabanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/elevation"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/banner_description"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/weighted_zero"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginRight="@dimen/small"
+        android:layout_weight="8"
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/weighted_zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--Source for spinner code: https://developer.android.com/guide/topics/ui/controls/spinner-->
+            <Spinner
+                android:id="@+id/spinner_home"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/weighted_zero"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/small"
+                android:layout_marginTop="@dimen/small"
+                android:layout_weight="1.5" />
+            <TextView
+                android:id="@+id/score_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/weighted_zero"
+                android:layout_weight="5"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:textSize="@dimen/scoreTextSize"
+                android:text="@string/zero"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <ImageView
+                    android:contentDescription="@string/minusOneDescription"
+                    android:id="@+id/home_minus_one"
+                    android:onClick="homeTeamMinus1"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <TextView
+                    android:id="@+id/home_score_one"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:text="@string/one"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/valuesTextSize"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:contentDescription="@string/plusOneDescription"
+                    android:id="@+id/home_plus_one"
+                    android:onClick="homeTeamPlus1"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <ImageView
+                    android:contentDescription="@string/minusTwoDescription"
+                    android:id="@+id/home_minus_two"
+                    android:onClick="homeTeamMinus2"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <TextView
+                    android:id="@+id/home_score_2"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:text="@string/two"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/valuesTextSize"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:contentDescription="@string/plusTwoDescription"
+                    android:id="@+id/home_plus_two"
+                    android:onClick="homeTeamPlus2"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <ImageView
+                    android:contentDescription="@string/minusThreeDescription"
+                    android:id="@+id/home_minus_three"
+                    android:onClick="homeTeamMinus3"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <TextView
+                    android:id="@+id/home_score_three"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:text="@string/three"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/valuesTextSize"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:contentDescription="@string/plusThreeDescription"
+                    android:id="@+id/home_plus_three"
+                    android:onClick="homeTeamPlus3"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/weighted_zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_away"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/weighted_zero"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/small"
+                android:layout_marginTop="@dimen/small"
+                android:layout_weight="1.5"/>
+
+            <TextView
+                android:id="@+id/score_away"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/weighted_zero"
+                android:layout_weight="5"
+                android:text="@string/zero"
+                android:textAlignment="center"
+                android:textSize="@dimen/scoreTextSize"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <ImageView
+                    android:contentDescription="@string/minusOneDescription"
+                    android:id="@+id/away_minus_one"
+                    android:onClick="awayTeamMinus1"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <TextView
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:text="@string/one"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/valuesTextSize"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:contentDescription="@string/plusOneDescription"
+                    android:id="@+id/away_plus_one"
+                    android:onClick="awayTeamPlus1"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <ImageView
+                    android:contentDescription="@string/minusTwoDescription"
+                    android:onClick="awayTeamMinus2"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <TextView
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:text="@string/two"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/valuesTextSize"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:contentDescription="@string/plusTwoDescription"
+                    android:onClick="awayTeamPlus2"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1">
+
+                <ImageView
+                    android:contentDescription="@string/minusThreeDescription"
+                    android:onClick="awayTeamMinus3"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <TextView
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/small"
+                    android:text="@string/three"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/valuesTextSize"
+                    android:gravity="center_vertical"/>
+
+                <ImageView
+                    android:contentDescription="@string/plusThreeDescription"
+                    android:onClick="awayTeamPlus3"
+                    android:layout_width="@dimen/weighted_zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/large"
+                    android:layout_weight=".8"
+                    android:padding="@dimen/small"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:onClick="resetOnClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_button"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"/>
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small">8dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="large">24dp</dimen>
+    <dimen name="x_large">48dp</dimen>
+
+    <dimen name="elevation">6dp</dimen>
+    <dimen name="elevation_small">4dp</dimen>
+
+    <dimen name="weighted_zero">0dp</dimen>
+    <!--text sizes-->
+    <dimen name="scoreTextSize">60sp</dimen>
+    <dimen name="valuesTextSize">24sp</dimen>
+
+</resources>
